@@ -1,7 +1,8 @@
 name: validate_rut
-description: RUT Validator is a Dart package that provides utilities for the validation and formatting of the Chilean Rol Único Tributario (RUT). This is a unique identifier used in Chile for both businesses and individuals. The utilities in this package implement the official algorithm published by the Chilean registry office.
+description: A Dart package for the validation and formatting of the Chilean Unique Tax Role (RUT).
 version: 0.1.0
 author: Tomás Ortega - ortegaxc.05@gmail.com
+homepage: https://github.com/ortegaxc/validate-rut
 
 environment:
   sdk: '>=2.17.3 <3.0.0'
