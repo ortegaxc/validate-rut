@@ -4,8 +4,8 @@ import 'remove_rut_formatting.dart';
 bool validateRut(String rut) {
   final unformattedRut = removeRutFormatting(rut);
 
-  // The RUT is not the proper length
-  if (unformattedRut.length != 9) return false;
+// The RUT must be 8 or 9 characters long
+  if (unformattedRut.length < 8 || unformattedRut.length > 9) return false;
 
   final parts = unformattedRut.split('');
   final checkDigit = parts.removeLast();
