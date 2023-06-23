@@ -3,14 +3,18 @@ import 'remove_rut_formatting.dart';
 String formatRut(String rut) {
   final unformattedRut = removeRutFormatting(rut);
 
+  // Separating check digit
+  final checkDigit = unformattedRut[unformattedRut.length - 1];
+  final numberWithoutCheckDigit =
+      unformattedRut.substring(0, unformattedRut.length - 1);
+
   String formattedNumber = '';
-  for (int i = unformattedRut.length - 1, j = 1; i >= 0; i--, j++) {
-    formattedNumber = unformattedRut[i] + formattedNumber;
+  for (int i = numberWithoutCheckDigit.length - 1, j = 1; i >= 0; i--, j++) {
+    formattedNumber = numberWithoutCheckDigit[i] + formattedNumber;
     if (j % 3 == 0 && i > 0) {
       formattedNumber = '.$formattedNumber';
     }
   }
 
-  final checkDigit = unformattedRut[unformattedRut.length - 1];
   return '$formattedNumber-$checkDigit';
 }
