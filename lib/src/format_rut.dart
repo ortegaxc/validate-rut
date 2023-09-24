@@ -1,7 +1,10 @@
+import 'dart:math';
+
 import 'remove_rut_formatting.dart';
 
 String formatRut(String rut) {
-  final unformattedRut = removeRutFormatting(rut);
+  final unformattedRut = removeRutFormatting(rut)
+      .substring(0, min(9, removeRutFormatting(rut).length));
 
   // Separating check digit
   final checkDigit = unformattedRut[unformattedRut.length - 1];
