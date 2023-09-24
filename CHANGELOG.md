@@ -1,3 +1,10 @@
+# 0.2.1
+### Added
+- Add rut_input_formatter.dart to exports in validate_rut.dart
+
+### Changed
+- Remove unused import of 'rut_input_formatter.dart' in main.dart
+
 # 0.2.0
 ### Added
 - Additional RUT to the `rutList` in `validate_rut_example.dart`.
