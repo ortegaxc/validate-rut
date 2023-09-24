@@ -1,9 +1,10 @@
 import 'package:validate_rut/validate_rut.dart';
 
 void main() {
-  final rutList = ['55443327', '5.544.332-7', '5.544.332-8'];
+  final rutList = ['55443327', '5.544.332-7', '5.544.332-8', '2088694502'];
 
   for (final rut in rutList) {
+    print('******* RUT: $rut *******');
     if (!rut.contains('-')) {
       final formattedRut = formatRut(rut);
       print('The formatted RUT for $rut is $formattedRut.');
@@ -17,5 +18,6 @@ void main() {
 
     final unformattedRut = removeRutFormatting(rut);
     print('The unformatted RUT for $rut is $unformattedRut.');
+    print('\n');
   }
 }
