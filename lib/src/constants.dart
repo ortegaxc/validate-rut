@@ -1,1 +1,1 @@
-final RegExp rutVerificationDigitRegex = RegExp(r'^[0-9Kk]{1}$');
+final RegExp rutVerificationDigitRegex = RegExp(r'^\d+[0-9Kk]?$');
