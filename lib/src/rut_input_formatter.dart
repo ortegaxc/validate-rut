@@ -8,7 +8,7 @@ class RutInputFormatter extends TextInputFormatter {
     String unformattedRut = removeRutFormatting(newValue.text);
     String formattedRut = formatRut(unformattedRut);
 
-    if (rutVerificationDigitRegex.hasMatch(unformattedRut)) return oldValue;
+    if (!rutVerificationDigitRegex.hasMatch(unformattedRut)) return oldValue;
 
     return TextEditingValue(
       text: formattedRut,
