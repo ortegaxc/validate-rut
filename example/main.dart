@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:validate_rut/src/rut_input_formatter.dart';
 import 'package:validate_rut/validate_rut.dart';
 
 void main() {
