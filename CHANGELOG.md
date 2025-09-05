@@ -1,5 +1,9 @@
 # 0.2.2
 ### Changed
+- fix error empty ´formatRut´ inputFormater
+
+# 0.2.2
+### Changed
 - Remove unused import of 'rut_input_formatter.dart' in main.dart
 - Update rutVerificationDigitRegex to allow for one or more digits before the verification digit in 'constants.dart'
 - Fix condition in RutInputFormatter to return oldValue when rutVerificationDigitRegex matches unformattedRut in 'rut_input_formatter.dart'

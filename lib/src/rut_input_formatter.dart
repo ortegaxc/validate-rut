@@ -5,10 +5,24 @@ class RutInputFormatter extends TextInputFormatter {
   @override
   TextEditingValue formatEditUpdate(
       TextEditingValue oldValue, TextEditingValue newValue) {
-    String unformattedRut = removeRutFormatting(newValue.text);
-    String formattedRut = formatRut(unformattedRut);
+    if (newValue.text.isEmpty) {
+      return newValue;
+    }
 
-    if (!rutVerificationDigitRegex.hasMatch(unformattedRut)) return oldValue;
+    String unformattedRut = removeRutFormatting(newValue.text);
+
+    if (unformattedRut.isEmpty) {
+      return TextEditingValue(
+        text: '',
+        selection: TextSelection.collapsed(offset: 0),
+      );
+    }
+
+    if (!rutVerificationDigitRegex.hasMatch(unformattedRut)) {
+      return oldValue;
+    }
+
+    String formattedRut = formatRut(unformattedRut);
 
     return TextEditingValue(
       text: formattedRut,

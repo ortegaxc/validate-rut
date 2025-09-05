@@ -17,6 +17,23 @@ void main() {
         expect(formatRut(rut), expected);
       });
     }
+
+    // Test edge cases
+    test('handles empty string', () {
+      expect(formatRut(''), '');
+    });
+
+    test('handles single character', () {
+      expect(formatRut('5'), '5');
+    });
+
+    test('handles two characters', () {
+      expect(formatRut('55'), '5-5');
+    });
+
+    test('handles string with only formatting', () {
+      expect(formatRut('.-'), '');
+    });
   });
 
   group('calculateDv', () {
