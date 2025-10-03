@@ -2,9 +2,12 @@ import 'calculate_dv.dart';
 import 'remove_rut_formatting.dart';
 
 bool validateRut(String rut) {
+  // Handle null, empty or whitespace-only strings
+  if (rut.trim().isEmpty) return false;
+
   final unformattedRut = removeRutFormatting(rut);
 
-// The RUT must be 8 or 9 characters long
+  // The RUT must be 8 or 9 characters long
   if (unformattedRut.length < 8 || unformattedRut.length > 9) return false;
 
   final parts = unformattedRut.split('');
