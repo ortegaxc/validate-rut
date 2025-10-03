@@ -1,6 +1,6 @@
 name: validate_rut
 description: A Dart package for the validation and formatting of the Chilean Unique Tax Role (RUT).
-version: 0.3.0
+version: 0.4.0
 homepage: https://github.com/ortegaxc/validate-rut
 # author: Tomás Ortega - ortegaxc.05@gmail.com
 
