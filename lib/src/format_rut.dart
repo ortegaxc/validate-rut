@@ -6,6 +6,11 @@ String formatRut(String rut) {
   final unformattedRut = removeRutFormatting(rut)
       .substring(0, min(9, removeRutFormatting(rut).length));
 
+  // Return empty or invalid input as-is
+  if (unformattedRut.isEmpty) {
+    return '';
+  }
+
   // Separating check digit
   final checkDigit = unformattedRut[unformattedRut.length - 1];
   final numberWithoutCheckDigit =
