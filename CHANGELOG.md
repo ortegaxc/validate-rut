@@ -5,7 +5,6 @@
 - Comprehensive edge case handling for empty strings, short inputs, and formatting-only inputs in RUT validation and formatting.
 - More robust input validation in `validateRut`, `formatRut`, and `calculateDv` to prevent exceptions and improve UX.
 - Improved and expanded test coverage for all edge cases and invalid inputs.
-- Documentation and comparison with external PRs to clarify design decisions.
 
 ### Changed
 
