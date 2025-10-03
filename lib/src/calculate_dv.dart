@@ -1,4 +1,10 @@
 String calculateDv(String number) {
+  // Handle empty or invalid input
+  if (number.isEmpty || !RegExp(r'^\d+$').hasMatch(number)) {
+    throw ArgumentError(
+        'Input must be a non-empty string containing only digits');
+  }
+
   final sequence = [2, 3, 4, 5, 6, 7];
   int sum = 0;
   for (int i = number.length - 1, j = 0; i >= 0; i--, j++) {
